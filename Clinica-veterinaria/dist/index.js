@@ -1,0 +1,32 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Veterinario_1 = __importDefault(require("./Veterinario"));
+1;
+const Recepcionista_1 = __importDefault(require("./Recepcionista"));
+const Consulta_1 = __importDefault(require("./Consulta"));
+const Gato_1 = __importDefault(require("./Gato"));
+const Cachorro_1 = __importDefault(require("./Cachorro"));
+const Ave_1 = __importDefault(require("./Ave"));
+const recepcionista = new Recepcionista_1.default("Julia", 226, 3500);
+const veterinario = new Veterinario_1.default("Dr. Paulo", 498, 6000);
+const gato = new Gato_1.default("Peixe", 2, "Igor");
+const cachorro = new Cachorro_1.default("Thor", 3, "Leandro");
+const ave = new Ave_1.default("pimpolho", 1, "Eurico");
+const consulta = new Consulta_1.default(ave, veterinario, new Date("2023-04-10"));
+veterinario.imprimeInfo();
+recepcionista.imprimeInfo();
+gato.imprimeInfo();
+cachorro.imprimeInfo();
+ave.imprimeInfo();
+consulta.imprimeInfo();
+recepcionista.confirmarAgendamento();
+recepcionista.confirmarAgendamento();
+recepcionista.confirmarAgendamento();
+veterinario.calcularBonus();
+recepcionista.calcularBonus();
+veterinario.realizarConsulta();
+veterinario.realizarConsulta();
+//# sourceMappingURL=index.js.map
